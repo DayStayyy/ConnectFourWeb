@@ -1,279 +1,366 @@
 
 <html>
-    <h1>Connect Four Game</h1>
-    <p class="info">Connect four is two player game. You can play with pc this js version of game. Made with native javascript on codepen. Defensive AI. Use chrome for best experience.</p>
-    <div id="game-base">
-    <div id="game-table">
-        
+  <div id="game-board">
+    <div class="column" id="column-0" data-x="0">
+      <svg height="100" width="100" class="row-5">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-4">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-3">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-2">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-1">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-0">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
     </div>
-    </div><!-- end base -->
+    <div class="column"  id="column-1" data-x="1">
+      <svg height="100" width="100" class="row-5">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-4">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-3">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-2">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-1">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-0">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+    </div>
+    <div class="column" id="column-2" data-x="2">
+      <svg height="100" width="100" class="row-5">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-4">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-3">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-2">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-1">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-0">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+    </div>
+    <div class="column" id="column-3" data-x="3">
+      <svg height="100" width="100" class="row-5">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-4">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-3">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-2">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-1">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-0">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+    </div>
+    <div class="column" id="column-4" data-x="4">
+      <svg height="100" width="100" class="row-5">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-4">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-3">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-2">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-1">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-0">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+    </div>
+    <div class="column" id="column-5" data-x="5">
+      <svg height="100" width="100" class="row-5">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-4">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-3">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-2">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-1">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-0">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+    </div>
+    <div class="column" id="column-6" data-x="6">
+      <svg height="100" width="100" class="row-5">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-4">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-3">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-2">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-1">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+      <svg height="100" width="100" class="row-0">
+        <circle cx="50" cy="50" r="40" stroke="#0B4E72" stroke-width="3" class="free" />
+      </svg> 
+    </div>
+  </div>
 </html>
 
 <script type="text/javascript">
-var gameField = new Array();
-var board = document.getElementById("game-table");
-var currentCol;
-var currentRow;
-var currentPlayer;
-var id = 1;
+  (function() {
 
-newgame();
+var ConnectFour = function() {
 
-async function newgame(){
-  prepareField();
-  await placeDisc(Math.floor(Math.random()*2)+1);
-}
-
-function checkForVictory(row,col){
-  if(getAdj(row,col,0,1)+getAdj(row,col,0,-1) > 2){
-    return true;
-  } else {
-    if(getAdj(row,col,1,0) > 2){
-      return true;
-    } else {
-      if(getAdj(row,col,-1,1)+getAdj(row,col,1,-1) > 2){
-        return true;
-      } else {
-        if(getAdj(row,col,1,1)+getAdj(row,col,-1,-1) > 2){
-          return true;
-        } else {
-          return false;
-        }
+  gameBoard = {};
+  currentPlayer = 'red';
+  numRows = 6;
+  numCols = 7;
+  numTurns = 0;
+  
+  _init = function() {
+    
+    var columns;
+    
+    columns = document.querySelectorAll('.column');
+    
+    Array.prototype.forEach.call(columns, function(col) {
+      col.addEventListener('click', function() {
+        markNextFree(col.getAttribute('data-x'));
+        iaPlay();
+      });
+    });
+    
+    for(var x = 0; x <= numRows; x++) {
+    
+      gameBoard[x] = {};
+      
+      for(var y = 0; y <= numCols; y++) {
+        gameBoard[x][y] = 'free';
       }
     }
-  }
-}
-
-function getAdj(row,col,row_inc,col_inc){
-  if(cellVal(row,col) == cellVal(row+row_inc,col+col_inc)){
-    return 1+getAdj(row+row_inc,col+col_inc,row_inc,col_inc);
-  } else {
-    return 0;
-  }
-}
-
-function cellVal(row,col){
-  if(gameField[row] == undefined || gameField[row][col] == undefined){
-    return -1;
-  } else {
-    return gameField[row][col];
-  }
-}
-
-async function firstFreeRow(col,player){
-  for(var i = 0; i<6; i++){
-    if(gameField[i][col]!=0){
-      break;
-    }
-  }
-  gameField[i-1][col] = player;
-  return i-1;
-}
-
-function possibleColumns(){
-  var moves_array = new Array();
-  for(var i=0; i<7; i++){
-    if(gameField[0][i] == 0){
-      moves_array.push(i);
-    }
-  }
-  return moves_array;
-}
-
-async function think(){
-  stringBoard = boardToString();
-  url = `http://127.0.0.1:8000/connectFour/api?board=${stringBoard}&player=2`
-  const response = await fetch(url);
-    // Storing data in form of JSON
-    console.log("response ",response);
-    var data =  await response.json();
-    console.log("data ",data);
-    return data;
-}
-
-async function think2(){
-  var possibleMoves = possibleColumns();
-  var aiMoves = new Array();
-  var blocked;
-  var bestBlocked = 0;
+    
+  };
   
-  for(var i=0; i<possibleMoves.length; i++){
-    for(var j=0; j<6; j++){
-      if(gameField[j][possibleMoves[i]] != 0){
+  var markNextFree = function(x) {
+
+    var nextY;
+    
+    nextY = false;
+    
+    for(var y = 0; y < numRows; y++) {
+      if(gameBoard[x][y] === 'free') {
+        nextY = y;
         break;
       }
     }
     
-    gameField[j-1][possibleMoves[i]] = 1;
-    blocked = getAdj(j-1,possibleMoves[i],0,1)+getAdj(j-1,possibleMoves[i],0,-1);
-    blocked = Math.max(blocked,getAdj(j-1,possibleMoves[i],1,0));
-    blocked = Math.max(blocked,getAdj(j-1,possibleMoves[i],-1,1));
-    blocked = Math.max(blocked,getAdj(j-1,possibleMoves[i],1,1)+getAdj(j-1, possibleMoves[i],-1,-1));
+    if(nextY === false) {
+      alert('No free spaces in this column. Try another.');
+      return false;
+    }
     
-    if(blocked >= bestBlocked){
-      if(blocked>bestBlocked){
-        bestBlocked = blocked;
-        aiMoves = new Array();
-      }
-      aiMoves.push(possibleMoves[i]);
+    gameBoard[x][nextY] = currentPlayer;
+    
+    document.querySelector('#column-'+x+' .row-'+nextY+' circle').setAttribute(
+        'class', currentPlayer
+    );
+    
+    if(isWinner(parseInt(x), nextY)) {
+      alert(currentPlayer+' wins!');
+      clearBoard();
+      return true;
     }
-    gameField[j-1][possibleMoves[i]] = 0;
+
+    numTurns = numTurns + 1;
+
+    if(numTurns >= numRows * numCols) {
+      alert('It\'s a tie!');
+      clearBoard();
+      return true;				
+    }
+
+    currentPlayer = currentPlayer === 'red' ? 'yellow' : 'red';
+
+  };
+
+  async function iaPlay() {
+    //console.log(gameBoard[3][0])
+    //console.log(gameBoard[3][0] == 'red')
+    stringBoard = boardToString();
+    url = `http://127.0.0.1:8000/connectFour/api?board=${stringBoard}&player=2`
+    console.log(url)
+    fetch(url)
+    .then(response => response.json())
+    .then(response => markNextFree(response))
   }
-  console.log(aiMoves)
-  return aiMoves
 
-
-}
-
-
-
-function boardToString(){
-    string = "";
-    gameField.forEach((item) => {
-        item.forEach((elm) => {
-            string += elm
-        })
+  function boardToString() {
+    var stringBoard = '';
+    for(var x = 0; x < 6; x++) {
+      for(var y = 0; y < 7; y++) {
+        if(gameBoard[y][x] == "free") {
+          stringBoard += "0";
+        } else if (gameBoard[y][x] == "red") {
+          stringBoard += "1";
+        } else {
+          stringBoard += "2";
+        }
+      }
+    }
+    console.log(stringBoard)
+    return stringBoard;
+  }
+  
+  var clearBoard = function() {
+    
+    Array.prototype.forEach.call(document.querySelectorAll('circle'), function(piece) {
+      piece.setAttribute('class', 'free');
     });
-    return string.split("").reverse().join("");
-}
+    
+    gameBoard = {};
 
-function Disc(player){
-  this.player = player;
-  this.color = player == 1 ? 'red' : 'yellow';
-  this.id = id.toString();
-  id++;
-  
-  this.addToScene = async function(){
-    board.innerHTML += '<div id="d'+this.id+'" class="disc '+this.color+'"></div>';
-    if(currentPlayer==2){
-      //computer move
-       var currentCol = await think();
-    console.log(currentCol)
-      document.getElementById('d'+this.id).style.left = (14+60*currentCol)+"px";
-      dropDisc(this.id,currentPlayer);
-    }
-  }
-  
-  var $this = this;
-  document.onmousemove = function(evt){
-    if(currentPlayer == 1){
-    currentCol = Math.floor((evt.clientX - board.offsetLeft)/60);
-    if(currentCol<0){currentCol=0;}
-    if(currentCol>6){currentCol=6;}
-    document.getElementById('d'+$this.id).style.left = (14+60*currentCol)+"px";
-    document.getElementById('d'+$this.id).style.top = "-55px";
-    }
-  }
-  document.onload = function(evt){
-    if(currentPlayer == 1){
-    currentCol = Math.floor((evt.clientX - board.offsetLeft)/60);
-    if(currentCol<0){currentCol=0;}
-    if(currentCol>6){currentCol=6;}
-    document.getElementById('d'+$this.id).style.left = (14+60*currentCol)+"px";
-    document.getElementById('d'+$this.id).style.top = "-55px";
-    }
-  }
-  
-  document.onclick = async function(evt){
-    if(currentPlayer == 1){
-      if(possibleColumns().indexOf(currentCol) != -1){
-          await dropDisc($this.id,$this.player);
-        
+    for(var x = 0; x <= numRows; x++) {
+    
+      gameBoard[x] = {};
+      
+      for(var y = 0; y <= numCols; y++) {
+        gameBoard[x][y] = 'free';
       }
+      
+        console.log(gameBoard);
     }
-  }
-}
 
-async function dropDisc(cid,player){
-  currentRow = await firstFreeRow(currentCol,player);
-  await moveit(cid,(14+currentRow*60));
-  currentPlayer = player;
-  await checkForMoveVictory();
-}
+    numTurns = 0;
+    
+    return gameBoard;
 
-async function checkForMoveVictory(){
-  if(!checkForVictory(currentRow,currentCol)){
-    await placeDisc(3-currentPlayer);
-  } else {
-    var ww = currentPlayer == 2 ? 'Computer' : 'Player';
-    await placeDisc(3-currentPlayer);
-    alert(ww+" win!");
-    board.innerHTML = "";
-    newgame();
-  }
-}
+  };
 
-async function placeDisc(player){
-  currentPlayer = player;
-  var disc = new Disc(player);
-  disc.addToScene();
-}
+  var isWinner = function(currentX, currentY) {
+    return checkDirection(currentX, currentY, 'vertical') || 
+      checkDirection(currentX, currentY, 'diagonal') || 
+      checkDirection(currentX, currentY, 'horizontal');
+  };
+  
+  var isBounds = function(x, y) {
+    return (gameBoard.hasOwnProperty(x) && typeof gameBoard[x][y] !== 'undefined');
+  };
 
-function prepareField(){
-  gameField = new Array();
-  for(var i=0; i<6; i++){
-    gameField[i] = new Array();
-    for(var j=0; j<7; j++){
-      gameField[i].push(0);
-    }
-  }
-}
+  var checkDirection = function(currentX, currentY, direction) {
+  
+    var chainLength, directions;
+    
+    directions = {
+      horizontal: [
+        [0, -1], [0, 1]
+      ],
+      vertical: [
+        [-1, 0], [1, 0]
+      ],
+      diagonal: [
+        [-1, -1], [1, 1], [-1, 1], [1, -1]
+      ]
+    };
+    
+    chainLength = 1;
+    
+    directions[direction].forEach(function(coords) {
+      
+      var i = 1;
 
-async function moveit(who,where){
-    document.getElementById('d'+who).style.top = where+'px';
-}
+      while( isBounds(currentX + (coords[0] * i), currentY + (coords[1] * i)) && 
+        (gameBoard[currentX + (coords[0] * i)][currentY + (coords[1] * i)] === currentPlayer)
+      ) {
+        chainLength = chainLength + 1; 
+        i = i + 1; 
+      };
+      
+    });
+    
+    return (chainLength >= 4);
+    
+  };
+  
+  _init();
+  
+};
+
+ConnectFour();
+
+
+})();
+
 </script>
 
 <style>
-body{
-  background:#eee;
+* {
+	border: 0;
+	padding: 0;
 }
 
-h1{
-  text-align:center;
-  margin-bottom:5px;
+#game-board {
+	background: #0074B3;
+	width: 730px;
+	cursor: pointer;
 }
 
-p.info{
-  text-align:center;
-  width:400px;
-  margin:0 auto;
-  font-size:12px;
-  font-weight:bold;
-  color:#666;
-  margin-bottom:20px;
+.column {
+	width: 100px;
+	display: inline-block;
 }
 
-#game-base{
-  width:640px;  
-  margin:0 auto;
-  padding-top:60px;
+.column:hover  circle.free{
+	fill: #D5E4ED;
 }
 
-#game-table{
-  width:434px;
-  height:374px;
-  margin:0 auto;
-  background:url("http://img.sr/images/2014/01/28/base.png") 0 0 no-repeat;
-  position:relative;
+circle.free {
+	fill: #fff;
 }
 
-.disc{
-  position:absolute;
-  z-index:-1;
-  top:-55px;
-  left:14px;
-  width:46px;
-  height:46px;
-  border-radius:46px;
-  transition:all .3s;
+circle.red {
+	fill: #D50000;
 }
 
-.disc.red{
-  background:#d96666;
+circle.yellow {
+	fill: #DAD400;
 }
 
-.disc.yellow{
-  background:#ffeb79;
-}
 </style>

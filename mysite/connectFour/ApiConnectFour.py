@@ -184,7 +184,6 @@ def apiConnectFour(BoardStr,AI_PIECE=2) :
             if BoardStr[loop] != "0" :
                 board[i][j] = int(BoardStr[loop])
             loop += 1
-    board = np.flip(board, 0)
 
     col, minimax_score = minimax(board, 5, -math.inf, math.inf, True,PLAYER_PIECE,AI_PIECE,COLUMN_COUNT,ROW_COUNT,WINDOW_LENGTH)
     if is_valid_location(board, col,ROW_COUNT):
