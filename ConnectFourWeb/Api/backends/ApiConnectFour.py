@@ -185,14 +185,15 @@ def apiConnectFour(BoardStr,level=2) :
                 board[i][j] = int(BoardStr[loop])
             loop += 1
 
-    if level == 1 :
+    if level == "1" :
         return randomApi(board)
-    else :
+    elif level == "2" :
         return minMaxApi(board,PLAYER_PIECE,AI_PIECE,COLUMN_COUNT,ROW_COUNT,WINDOW_LENGTH)
+    return -1
 
 
 def randomApi(board) :
-    result = randint(1,8)
+    result = randint(1,7)
     while(len(board[result]) == 6) :
         result = randint(1,8)
     return result

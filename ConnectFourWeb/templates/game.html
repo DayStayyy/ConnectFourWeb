@@ -155,19 +155,34 @@ var ConnectFour = function() {
   numRows = 6;
   numCols = 7;
   numTurns = 0;
-  
+  canPlay = true;
   _init = function() {
     
     var columns;
     
     columns = document.querySelectorAll('.column');
     
-    Array.prototype.forEach.call(columns, function(col) {
-      col.addEventListener('click', function() {
-        markNextFree(col.getAttribute('data-x'));
-        iaPlay();
+    columns.forEach(col => {
+      col.addEventListener('click', async function() {
+        console.log("canPlay", canPlay);
+        if (canPlay) {
+          canPlay = false;
+          markNextFree(col.getAttribute('data-x'));
+          console.log("AVANT")
+          const t = await iaPlay();
+          console.log(t)
+        }
+        canPlay = true;
       });
     });
+
+    // Array.prototype.forEach.call(columns, function(col) {
+    //   col.addEventListener('click', function(event) {
+    //     event.preventDefault();
+    //     markNextFree(col.getAttribute('data-x'));
+    //     iaPlay();
+    //   }, false);
+    // });
     
     for(var x = 0; x <= numRows; x++) {
     
@@ -220,6 +235,7 @@ var ConnectFour = function() {
 
     currentPlayer = currentPlayer === 'red' ? 'yellow' : 'red';
 
+
   };
 
   async function iaPlay() {
@@ -233,6 +249,9 @@ var ConnectFour = function() {
     fetch(url)
     .then(response => response.json())
     .then(response => markNextFree(response))
+    .then(response => {return "ok";})
+
+    
   }
 
   function boardToString() {
