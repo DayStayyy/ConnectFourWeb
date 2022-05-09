@@ -155,7 +155,6 @@ var ConnectFour = function() {
   numRows = 6;
   numCols = 7;
   numTurns = 0;
-  canPlay = true;
   _init = function() {
     
     var columns;
@@ -163,17 +162,11 @@ var ConnectFour = function() {
     columns = document.querySelectorAll('.column');
     
     columns.forEach(col => {
-      col.addEventListener('click', async function() {
-        console.log("canPlay", canPlay);
-        if (canPlay) {
-          canPlay = false;
+      col.addEventListener('click', function() {
           markNextFree(col.getAttribute('data-x'));
-          console.log("AVANT")
-          const t = await iaPlay();
-          console.log(t)
+          iaPlay();
         }
-        canPlay = true;
-      });
+      );
     });
 
     // Array.prototype.forEach.call(columns, function(col) {
@@ -250,8 +243,6 @@ var ConnectFour = function() {
     .then(response => response.json())
     .then(response => markNextFree(response))
     .then(response => {return "ok";})
-
-    
   }
 
   function boardToString() {

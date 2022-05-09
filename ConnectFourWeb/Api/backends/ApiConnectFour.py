@@ -193,9 +193,11 @@ def apiConnectFour(BoardStr,level=2) :
 
 
 def randomApi(board) :
-    result = randint(1,7)
-    while(len(board[result]) == 6) :
-        result = randint(1,8)
+    print("randomApi : ", board)
+    result = randint(1,6)
+    while(board[5][result] != 0) :
+            result = randint(1,6)
+    print("randomApi : ", result)
     return result
 
 def minMaxApi(board,PLAYER_PIECE,AI_PIECE,COLUMN_COUNT,ROW_COUNT,WINDOW_LENGTH) :
